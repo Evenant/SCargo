@@ -1,0 +1,11 @@
+
+import SCargo
+
+env = Environment()
+SCargo.init_SCargo(env)
+Export("env")
+
+SConscript("simple_program/SConscript")
+SConscript("ext_crate/SConscript")
+SConscript("c_in_rust/SConscript")
+SConscript("rust_in_c/SConscript")

@@ -1,3 +1,4 @@
+import SCargo
 import os
 from subprocess import Popen
 import sys
@@ -19,23 +20,23 @@ print(colored('Succesfully built tests.\n','green'))
 
 try:
 	print(colored("Test 1 (Simple Program)",'blue'))
-	if run_test_in_dir("tests/simple_program"):
+	if run_test_in_dir("simple_program"):
 		raise Exception(colored("Test 1 Failed!", 'red'))
 	print(colored("Test 1 Successful!\n",'green'))
 	
 
 	print(colored("Test 2 (Binary with external Crate)", 'blue'))
-	if run_test_in_dir("tests/ext_crate"):
+	if run_test_in_dir("ext_crate"):
 		raise Exception(colored("Test 2 Failed!"),'red')
 	print(colored("Test 2 Successful!\n",'green'))
 
 	print(colored("Test 3 (C in Rust)", 'blue'))
-	if run_test_in_dir("tests/c_in_rust"):
+	if run_test_in_dir("c_in_rust"):
 		raise Exception(colored("Test 3 Failed!"),'red')
 	print(colored("Test 3 Successful!\n", 'green'))
 
 	print(colored("Test 4 (Rust in C)", 'blue'))
-	if run_test_in_dir("tests/rust_in_c"):
+	if run_test_in_dir("rust_in_c"):
 		raise Exception(colored("Test 4 Failed!"),'red')
 	print(colored("Test 4 Successful!\n", 'green'))
 	

@@ -1,0 +1,14 @@
+[project]
+name = "SCargo"
+version = "0.1.0"
+authors = [
+  { name="scongebop", email="littlefast@gmail.com" },
+]
+license = {file = "LICENSE.txt"}
+description = "An extension of SCons for building Rust."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+	"SCons>=4.4.0"
+]
+

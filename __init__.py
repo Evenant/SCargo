@@ -4,8 +4,6 @@ import SCargo.program as program
 import SCargo.c_shared as c_shared
 import SCargo.c_static as c_static
 
-from SCons.Script import Builder
-
 """
 SCargo is an extension of the SCons build tool meant for compiling Rust projects.
 
