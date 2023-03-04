@@ -1,4 +1,3 @@
-import SCargo
 import os
 from subprocess import Popen
 from termcolor import colored
