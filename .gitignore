@@ -3,6 +3,6 @@
 !/tests/*/*.c
 !/tests/*/SConscript
 
-/.sconsign.dblite
+.sconsign.dblite
 
 __pycache__
