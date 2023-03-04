@@ -1,7 +1,6 @@
 import SCargo
 import os
 from subprocess import Popen
-import sys
 from termcolor import colored
 
 def run_test_in_dir(dir)->bool:
