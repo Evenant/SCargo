@@ -1,0 +1,7 @@
+import os
+
+Import('env')
+
+dep = env.StaticLibrary('helloworld_c', ['helloworld.c'])
+
+env.RustProgram('main', ['program.rs', dep], LIBPATH=[os.getcwd()])

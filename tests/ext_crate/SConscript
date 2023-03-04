@@ -1,0 +1,6 @@
+Import("env")
+
+
+dep = env.RustStatic('dependency', ['dependency.rs'])
+
+env.RustProgram('main', ['main.rs', dep])

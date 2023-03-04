@@ -1,0 +1,8 @@
+/tests/*/*
+!/tests/*/*.rs
+!/tests/*/*.c
+!/tests/*/SConscript
+
+/.sconsign.dblite
+
+__pycache__

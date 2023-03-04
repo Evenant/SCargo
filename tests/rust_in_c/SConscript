@@ -1,0 +1,6 @@
+import os
+Import('env')
+
+dep = env.RustCShared('helloworld_rust', ['helloworld.rs'])
+
+env.Program('main', ['program.c', dep], LIBPATH=[os.getcwd()], LIBS=['helloworld_rust'])
