@@ -13,7 +13,7 @@ SCargo is an extension of the SCons build tool meant for compiling Rust projects
 def init_SCargo(env):
 	env["RUSTCFG"] = []
 	env['RUSTEXTERNS'] = []
-	env['RUSTTARGET'] = 'debug'
+	env['RUSTOPTIM'] = 'debug'
 	env['RUSTFLAGS'] = []
 	env.Append(BUILDERS = {'RustProgram':program.builder})
 	env.Append(BUILDERS = {'RustStatic':rust_static.builder})

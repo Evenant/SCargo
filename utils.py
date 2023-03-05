@@ -32,7 +32,7 @@ def rustc_get_libs(env) -> str:
 
 def rustc_optimizations(env)->str:
 	ret = " "
-	if env.get("RUSTTARGET","") == "release":
+	if env.get("RUSTOPTIM","") == "release":
 		ret += "-O"
 	else:
 		ret += "-g"
