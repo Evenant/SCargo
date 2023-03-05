@@ -2,6 +2,8 @@
 !/tests/*/*.rs
 !/tests/*/*.c
 !/tests/*/SConscript
+!/tests/*/src/
+!/tests/*/Cargo.toml
 
 .sconsign.dblite
 
