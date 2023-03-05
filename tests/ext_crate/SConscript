@@ -1,6 +1,7 @@
+import os
 Import("env")
 
 
 dep = env.RustStatic('dependency', ['dependency.rs'])
 
-env.RustProgram('main', ['main.rs', dep])
+env.RustProgram('main', ['main.rs', dep], RUSTEXTERNS=[f'dependency={os.getcwd()}/{dep[0]}'])
