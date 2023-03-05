@@ -14,7 +14,7 @@ def builder_action(target, source, env):
 		raise SCerrors.BuildError(errstr="rustc error.", filename=str(source[0]), action=builder_action)
 
 def builder_emitter(target, source, env):
-	target[0] = env['LIBPREFIX'] + str(target[0]) + env['LIBSUFFIX']
+	target[0] = env.get('LIBPREFIX','') + str(target[0]) + env.get('LIBSUFFIX','')
 	env.Append(RUSTFLAGS=f"-L\"{os.getcwd()}\"")
 
 	return target, source

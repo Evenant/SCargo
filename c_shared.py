@@ -15,7 +15,7 @@ def builder_action(target, source, env):
 
 def builder_emitter(target, source, env):
 	target_crate = str(target[0])
-	target[0] = env['LIBPREFIX'] + str(target[0]) + env['SHLIBSUFFIX']
+	target[0] = env.get('LIBPREFIX','') + str(target[0]) + env.get('SHLIBSUFFIX','')
 	env.Append(RUSTFLAGS=f"-L\"{os.getcwd()}\"")
 
 
