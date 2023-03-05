@@ -38,6 +38,10 @@ try:
 		raise Exception(colored("Test 4 Failed!"),'red')
 	print(colored("Test 4 Successful!\n", 'green'))
 	
+	print(colored("Test 5 (Cargo in SCargo)", 'blue'))
+	if run_test_in_dir("cargo_interop"):
+		raise Exception(colored("Test 5 Failed!"),'red')
+	print(colored("Test 5 Successful!\n", 'green'))
 except:
 	print(colored("TESTS UNSUCCESSFUL", 'red'))
 else:

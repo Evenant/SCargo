@@ -1,0 +1,8 @@
+import os
+from SCons.Errors import BuildError
+
+Import('env')
+
+test_package = env.Command(f'target/debug/{env.get("LIBPREFIX")}test_package.rlib', '', f'cd {os.getcwd()} && cargo build')
+env.Clean([test_package], ["target/"])
+env.RustProgram('main', ['program.rs', test_package], RUSTEXTERNS=[f'test_package={os.getcwd()}/{str(test_package[0])}'])
