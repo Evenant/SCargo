@@ -1,0 +1,2 @@
+SCons==4.4.0
+termcolor==2.2.0
