@@ -15,7 +15,7 @@ def init_SCargo(env):
 	env['RUSTEXTERNS'] = []
 	env['RUSTTARGET'] = 'debug'
 	env['RUSTFLAGS'] = []
-	env.Append(BUILDERS = {'RustProgram':program.rust_program_builder})
+	env.Append(BUILDERS = {'RustProgram':program.builder})
 	env.Append(BUILDERS = {'RustStatic':rust_static.builder})
 	env.Append(BUILDERS = {'RustShared':rust_shared.builder})
 	env.Append(BUILDERS = {'RustCStatic':c_shared.builder})
