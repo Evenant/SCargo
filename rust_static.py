@@ -16,7 +16,7 @@ def builder_action(target, source, env):
 def builder_emitter(target, source, env):
 	target_crate = str(target[0])
 	target[0] = env['LIBPREFIX'] + str(target[0]) + '.rlib'
-	env.Append(RUSTEXTERNS=[f"{target_crate}={os.getcwd() + '/' + str(target[0])}"])
+	#env.Append(RUSTEXTERNS=[f"{target_crate}={os.getcwd() + '/' + str(target[0])}"])
 
 	return target, source
 
