@@ -23,10 +23,10 @@ def rustc_get_libs(env) -> str:
 	ret = ""
 
 	for libpath in env.get("LIBPATH", []):
-		ret += f" -L {libpath}"
+		ret += f" -L{libpath}"
 	
 	for libname in env.get("LIBS", []):
-		ret += f" -l {libname}"
+		ret += f" -l{libname}"
 
 	return ret
 
@@ -48,7 +48,8 @@ def generic_command(target, source, env):
 	command += f" {str(source[0])}"
 	command +=  f" -o {str(target[0])}"
 
-	command += f" {env.get('RUSTFLAGS','')}"
+	for flag in env.get('RUSTFLAGS',[]):
+		command += f" {flag}"
 	
 	command +=  rustc_extern_crates(env)
 	command += rustc_get_libs(env)
